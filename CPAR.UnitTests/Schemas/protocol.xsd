@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="protocol" nillable="true" type="Protocol" />
+  <xs:complexType name="Protocol">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="description" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="tests" type="ArrayOfChoice1" />
+    </xs:sequence>
+    <xs:attribute name="name" type="xs:string" />
+  </xs:complexType>
+  <xs:complexType name="ArrayOfChoice1">
+    <xs:choice minOccurs="0" maxOccurs="unbounded">
+      <xs:element minOccurs="1" maxOccurs="1" name="stimulus-response" nillable="true" type="StimulusResponseTest" />
+      <xs:element minOccurs="1" maxOccurs="1" name="temporal-summation" nillable="true" type="TemporalSummationTest" />
+      <xs:element minOccurs="1" maxOccurs="1" name="conditioned-pain-modulation" nillable="true" type="ConditionedPainTest" />
+    </xs:choice>
+  </xs:complexType>
+  <xs:complexType name="StimulusResponseTest">
+    <xs:complexContent mixed="false">
+      <xs:extension base="Test">
+        <xs:attribute name="vas-pdt" type="xs:double" use="required" />
+        <xs:attribute name="delta-pressure" type="xs:double" use="required" />
+        <xs:attribute name="stop-mode" type="StopMode" use="required" />
+        <xs:attribute name="pressure-limit" type="xs:double" use="required" />
+        <xs:attribute name="second-cuff" type="xs:boolean" use="required" />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="Test" abstract="true">
+    <xs:attribute name="ID" type="xs:string" />
+    <xs:attribute name="name" type="xs:string" />
+  </xs:complexType>
+  <xs:complexType name="ConditionedPainTest">
+    <xs:complexContent mixed="false">
+      <xs:extension base="Test">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="1" name="cond-pressure" type="CalculatedParameter" />
+        </xs:sequence>
+        <xs:attribute name="vas-pdt" type="xs:double" use="required" />
+        <xs:attribute name="delta-pressure" type="xs:double" use="required" />
+        <xs:attribute name="stop-mode" type="StopMode" use="required" />
+        <xs:attribute name="pressure-limit" type="xs:double" use="required" />
+        <xs:attribute name="delta-cond-pressure" type="xs:double" use="required" />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="CalculatedParameter">
+    <xs:attribute name="test-id" type="xs:string" />
+    <xs:attribute name="calculation-type" type="PressureType" use="required" />
+    <xs:attribute name="value" type="xs:double" use="required" />
+    <xs:attribute name="description" type="xs:string" />
+  </xs:complexType>
+  <xs:simpleType name="PressureType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="constant" />
+      <xs:enumeration value="vas" />
+      <xs:enumeration value="range" />
+      <xs:enumeration value="external" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="StopMode">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="vas-and-button" />
+      <xs:enumeration value="button" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="TemporalSummationTest">
+    <xs:complexContent mixed="false">
+      <xs:extension base="Test">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="1" name="pressure-stimulate" type="CalculatedParameter" />
+        </xs:sequence>
+        <xs:attribute name="no-of-stimuli" type="xs:unsignedByte" use="required" />
+        <xs:attribute name="t-on" type="xs:double" use="required" />
+        <xs:attribute name="t-off" type="xs:double" use="required" />
+        <xs:attribute name="pressure-static" type="xs:double" use="required" />
+        <xs:attribute name="second-cuff" type="xs:boolean" use="required" />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+</xs:schema>

@@ -1,0 +1,7 @@
+Start the selected test
+Abort the test
+Accept result from the completed test
+Select the next test
+Select the previous test
+Setup external parameters
+

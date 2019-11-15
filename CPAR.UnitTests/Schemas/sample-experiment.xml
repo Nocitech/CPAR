@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<experiment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xsi:noNamespaceSchemaLocation="c:\cpar\xsd\experiment.xsd"
+            name="Sample Experiment" 
+            protocol="sample-protocol">
+  
+<description>
+This is a test experiment that is created in order to be used during development of the CPAR Software.
+</description>
+  
+<experimenters>
+  <experimenter name="Kristian Hennings" affiliation="AAU" title="Adjunct Ass. Professor" mail="krhe@hst.aau.dk" phone="20725669"/>
+  <experimenter name="Laura Petrini" affiliation="AAU" title="Adjunct Ass. Professor" mail="lap@hst.aau.dk" phone="20725669"/>
+</experimenters>
+  
+<factors>
+  <factor name="Group" type="multiple-exclusive">
+    <level name="A"/>
+    <level name="B"/>
+  </factor>  
+  <factor name="Session" type="free">
+    <level name="Pre-stimulus"/>
+    <level name="Post-stimulus"/>
+  </factor>
+</factors>
+  
+</experiment>

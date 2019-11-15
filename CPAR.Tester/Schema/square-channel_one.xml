@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<script xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="testscript.xsd"
+          name="Square Channel One">
+  <SetWaveformProgram channel="0" repeat="10">
+    <instruction instruction-type="STEP" argument="255" steps="1000" />
+  </SetWaveformProgram>
+  <StartStimulation stop-criterion="STOP_CRITERION_ON_BUTTON_VAS" />
+</script>

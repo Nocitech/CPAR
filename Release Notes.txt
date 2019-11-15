@@ -1,0 +1,6 @@
+
+2.5
+Added StartleTest.
+Made it possible to use averages from other tests in test parameters.
+Refactored the CPAR communication for faster.
+Fixed bug in displaying the results. The labels in x-axis are now whole seconds only.

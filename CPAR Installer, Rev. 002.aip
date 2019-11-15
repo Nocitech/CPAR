@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<DOCUMENT Type="Advanced Installer" CreateVersion="14.5.1" version="16.2" Modules="professional" RootPath="." Language="en" Id="{0B3D5F7A-BB6A-4399-BBFD-538FE080BFA3}">
+  <COMPONENT cid="caphyon.advinst.msicomp.ProjectOptionsComponent">
+    <ROW Name="HiddenItems" Value="AppXProductDetailsComponent;AppXDependenciesComponent;AppXAppDetailsComponent;AppXVisualAssetsComponent;AppXCapabilitiesComponent;AppXAppDeclarationsComponent;AppXUriRulesComponent;MsiJavaComponent;MsiDriverPackagesComponent;UserAccountsComponent;ScheduledTasksComponent;SqlConnectionComponent;AutorunComponent;FirewallExceptionComponent;GameUxComponent;MsiDirectEditorComponent;SharePointSlnComponent;SilverlightSlnComponent;MultipleInstancesComponent;SccmComponent;ActSyncAppComponent;FixupComponent"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiPropsComponent">
+    <ROW Property="AI_BITMAP_DISPLAY_MODE" Value="0"/>
+    <ROW Property="AI_FINDEXE_TITLE" Value="Select the installation package for [|ProductName]" ValueLocId="AI.Property.FindExeTitle"/>
+    <ROW Property="AI_PREDEF_LCONDS_PROPS" Value="AI_DETECTED_DOTNET_VERSION"/>
+    <ROW Property="AI_REQUIRED_DOTNET_DISPLAY" MultiBuildValue="DefaultBuild:4.5.2" ValueLocId="-"/>
+    <ROW Property="AI_REQUIRED_DOTNET_VERSION" MultiBuildValue="DefaultBuild:4.5.2" ValueLocId="-"/>
+    <ROW Property="ALLUSERS" Value="1"/>
+    <ROW Property="ARPCOMMENTS" Value="This installer database contains the logic and data required to install [|ProductName]." ValueLocId="*"/>
+    <ROW Property="ARPNOMODIFY" MultiBuildValue="DefaultBuild:1"/>
+    <ROW Property="ARPNOREPAIR" Value="1" MultiBuildValue="DefaultBuild:1"/>
+    <ROW Property="Manufacturer" Value="Nocitech ApS"/>
+    <ROW Property="ProductCode" Value="1033:{E6C2833B-BC6D-4705-A7BB-CD79A82AF99D} " Type="16"/>
+    <ROW Property="ProductLanguage" Value="1033"/>
+    <ROW Property="ProductName" Value="CPAR Control Software"/>
+    <ROW Property="ProductVersion" Value="2.8.5" Type="32"/>
+    <ROW Property="SecureCustomProperties" Value="OLDPRODUCTS;AI_NEWERPRODUCTFOUND;AI_SETUPEXEPATH;SETUPEXEDIR"/>
+    <ROW Property="UpgradeCode" Value="{6F295576-712C-4908-835F-91A70773DEAE}"/>
+    <ROW Property="WindowsType9X" MultiBuildValue="DefaultBuild:Windows 9x/ME" ValueLocId="-"/>
+    <ROW Property="WindowsType9XDisplay" MultiBuildValue="DefaultBuild:Windows 9x/ME" ValueLocId="-"/>
+    <ROW Property="WindowsTypeNT40" MultiBuildValue="DefaultBuild:Windows NT 4.0" ValueLocId="-"/>
+    <ROW Property="WindowsTypeNT40Display" MultiBuildValue="DefaultBuild:Windows NT 4.0" ValueLocId="-"/>
+    <ROW Property="WindowsTypeNT50" MultiBuildValue="DefaultBuild:Windows 2000" ValueLocId="-"/>
+    <ROW Property="WindowsTypeNT50Display" MultiBuildValue="DefaultBuild:Windows 2000" ValueLocId="-"/>
+    <ROW Property="WindowsTypeNT5X" MultiBuildValue="DefaultBuild:Windows XP/2003 RTM, Windows XP/2003 SP1, Windows XP SP2 x86" ValueLocId="-"/>
+    <ROW Property="WindowsTypeNT5XDisplay" MultiBuildValue="DefaultBuild:Windows XP/2003 RTM, Windows XP/2003 SP1, Windows XP SP2 x86" ValueLocId="-"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiDirsComponent">
+    <ROW Directory="APPDIR" Directory_Parent="TARGETDIR" DefaultDir="APPDIR:." IsPseudoRoot="1"/>
+    <ROW Directory="DesktopFolder" Directory_Parent="TARGETDIR" DefaultDir="DESKTO~1|DesktopFolder" IsPseudoRoot="1"/>
+    <ROW Directory="SHORTCUTDIR" Directory_Parent="TARGETDIR" DefaultDir="SHORTC~1|SHORTCUTDIR" IsPseudoRoot="1"/>
+    <ROW Directory="TARGETDIR" DefaultDir="SourceDir"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiCompsComponent">
+    <ROW Component="AI_ExePath" ComponentId="{6DB7E514-4EC7-4BEC-94F0-8ABE8AB7DC22}" Directory_="APPDIR" Attributes="4" KeyPath="AI_ExePath"/>
+    <ROW Component="APPDIR" ComponentId="{91EB2361-A2AF-473B-B441-7DB2D2825121}" Directory_="APPDIR" Attributes="0"/>
+    <ROW Component="CPAR.Communication.dll" ComponentId="{671C8FFB-0A26-4F9D-B09D-87F995B39680}" Directory_="APPDIR" Attributes="0" KeyPath="CPAR.Communication.dll"/>
+    <ROW Component="CPAR.Core.dll" ComponentId="{26E863BE-4495-4BAD-975D-CF6BD0FFF520}" Directory_="APPDIR" Attributes="0" KeyPath="CPAR.Core.dll"/>
+    <ROW Component="CPAR.Logging.dll" ComponentId="{198536F0-DA08-4526-B340-05D2BF73D493}" Directory_="APPDIR" Attributes="0" KeyPath="CPAR.Logging.dll"/>
+    <ROW Component="CPAR.Runner.exe" ComponentId="{07AAC92A-BF01-455B-A4C0-357CF1B49C72}" Directory_="APPDIR" Attributes="0" KeyPath="CPAR.Runner.exe"/>
+    <ROW Component="CPAR.Tester.exe" ComponentId="{970DC09A-1269-4783-8A11-6CE35F6C52A6}" Directory_="APPDIR" Attributes="0" KeyPath="CPAR.Tester.exe"/>
+    <ROW Component="ClosedXML.dll" ComponentId="{2226626D-05B7-4FCD-B372-F3622505E354}" Directory_="APPDIR" Attributes="0" KeyPath="ClosedXML.dll"/>
+    <ROW Component="DocumentFormat.OpenXml.dll" ComponentId="{262988BB-578F-4910-A534-EAAFFEDD0AC7}" Directory_="APPDIR" Attributes="0" KeyPath="DocumentFormat.OpenXml.dll"/>
+    <ROW Component="IronPython.dll" ComponentId="{11F248B2-71CA-4CC5-AF0B-BD364A46F77D}" Directory_="APPDIR" Attributes="0" KeyPath="IronPython.dll"/>
+    <ROW Component="Microsoft.Dynamic.dll" ComponentId="{36FF061A-ADF5-49B1-A519-DD45A8549BEF}" Directory_="APPDIR" Attributes="0" KeyPath="Microsoft.Dynamic.dll"/>
+    <ROW Component="Microsoft.Scripting.Metadata.dll" ComponentId="{01DE201E-6009-4991-AA7C-29359FDADD3E}" Directory_="APPDIR" Attributes="0" KeyPath="Microsoft.Scripting.Metadata.dll"/>
+    <ROW Component="Microsoft.Scripting.dll" ComponentId="{72217516-4D9C-4339-A394-A3DC9C2FC3BE}" Directory_="APPDIR" Attributes="0" KeyPath="Microsoft.Scripting.dll"/>
+    <ROW Component="ProductInformation" ComponentId="{8DDFEBC1-B6AC-42EB-9937-1CE9E8DE2CCB}" Directory_="APPDIR" Attributes="4" KeyPath="Version"/>
+    <ROW Component="SHORTCUTDIR" ComponentId="{FA81FFF0-51B1-4997-BEBE-DD8BAAF1A598}" Directory_="SHORTCUTDIR" Attributes="0"/>
+    <ROW Component="ScienceFoundry.IO.Matlab.dll" ComponentId="{CB601910-0C76-4F28-A1E9-D6C242BDF5D0}" Directory_="APPDIR" Attributes="0" KeyPath="ScienceFoundry.IO.Matlab.dll"/>
+    <ROW Component="ScienceFoundry.UI.Wizard.dll" ComponentId="{0D7DA3E5-9641-4E73-BF59-4C366983969B}" Directory_="APPDIR" Attributes="0" KeyPath="ScienceFoundry.UI.Wizard.dll"/>
+    <ROW Component="cparexport.exe" ComponentId="{3BA6CFCC-32BE-49E2-97BD-8279BA6F67AD}" Directory_="APPDIR" Attributes="0" KeyPath="cparexport.exe"/>
+    <ROW Component="cparexport.exe.config" ComponentId="{A2A16267-590F-462C-AC63-5F5AC136C47E}" Directory_="APPDIR" Attributes="0" KeyPath="cparexport.exe.config" Type="0"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiFeatsComponent">
+    <ROW Feature="MainFeature" Title="MainFeature" Description="Description" Display="1" Level="1" Directory_="APPDIR" Attributes="0"/>
+    <ATTRIBUTE name="CurrentFeature" value="MainFeature"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiFilesComponent">
+    <ROW File="ClosedXML.dll" Component_="ClosedXML.dll" FileName="CLOSED~1.DLL|ClosedXML.dll" Attributes="0" SourcePath="bin\Debug\ClosedXML.dll" SelfReg="false"/>
+    <ROW File="ClosedXML.pdb" Component_="ClosedXML.dll" FileName="CLOSED~1.PDB|ClosedXML.pdb" Attributes="0" SourcePath="bin\Debug\ClosedXML.pdb" SelfReg="false"/>
+    <ROW File="cparexport.exe" Component_="cparexport.exe" FileName="CPAR-E~1.EXE|cpar-export.exe" Attributes="0" SourcePath="bin\Debug\cpar-export.exe" SelfReg="false" DigSign="true"/>
+    <ROW File="cparexport.exe.config" Component_="cparexport.exe.config" FileName="CPAR-E~1.CON|cpar-export.exe.config" Attributes="0" SourcePath="bin\Debug\cpar-export.exe.config" SelfReg="false"/>
+    <ROW File="cparexport.pdb" Component_="cparexport.exe" FileName="CPAR-E~1.PDB|cpar-export.pdb" Attributes="0" SourcePath="bin\Debug\cpar-export.pdb" SelfReg="false"/>
+    <ROW File="CPAR.Communication.dll" Component_="CPAR.Communication.dll" FileName="CPARCO~1.DLL|CPAR.Communication.dll" Attributes="0" SourcePath="bin\Debug\CPAR.Communication.dll" SelfReg="false"/>
+    <ROW File="CPAR.Communication.pdb" Component_="CPAR.Communication.dll" FileName="CPARCO~1.PDB|CPAR.Communication.pdb" Attributes="0" SourcePath="bin\Debug\CPAR.Communication.pdb" SelfReg="false"/>
+    <ROW File="CPAR.Core.dll" Component_="CPAR.Core.dll" FileName="CPARCO~2.DLL|CPAR.Core.dll" Attributes="0" SourcePath="bin\Debug\CPAR.Core.dll" SelfReg="false"/>
+    <ROW File="CPAR.Core.pdb" Component_="CPAR.Core.dll" FileName="CPARCO~2.PDB|CPAR.Core.pdb" Attributes="0" SourcePath="bin\Debug\CPAR.Core.pdb" SelfReg="false"/>
+    <ROW File="CPAR.Logging.dll" Component_="CPAR.Logging.dll" FileName="CPARLO~1.DLL|CPAR.Logging.dll" Attributes="0" SourcePath="bin\Debug\CPAR.Logging.dll" SelfReg="false"/>
+    <ROW File="CPAR.Logging.pdb" Component_="CPAR.Logging.dll" FileName="CPARLO~1.PDB|CPAR.Logging.pdb" Attributes="0" SourcePath="bin\Debug\CPAR.Logging.pdb" SelfReg="false"/>
+    <ROW File="CPAR.Runner.exe" Component_="CPAR.Runner.exe" FileName="CPARRU~1.EXE|CPAR.Runner.exe" Attributes="0" SourcePath="bin\Debug\CPAR.Runner.exe" SelfReg="false" DigSign="true"/>
+    <ROW File="CPAR.Runner.exe.config" Component_="cparexport.exe.config" FileName="CPARRU~1.CON|CPAR.Runner.exe.config" Attributes="0" SourcePath="bin\Debug\CPAR.Runner.exe.config" SelfReg="false"/>
+    <ROW File="CPAR.Runner.pdb" Component_="CPAR.Runner.exe" FileName="CPARRU~1.PDB|CPAR.Runner.pdb" Attributes="0" SourcePath="bin\Debug\CPAR.Runner.pdb" SelfReg="false"/>
+    <ROW File="CPAR.Tester.exe" Component_="CPAR.Tester.exe" FileName="CPARTE~1.EXE|CPAR.Tester.exe" Attributes="0" SourcePath="bin\Debug\CPAR.Tester.exe" SelfReg="false" DigSign="true"/>
+    <ROW File="CPAR.Tester.exe.config" Component_="cparexport.exe.config" FileName="CPARTE~1.CON|CPAR.Tester.exe.config" Attributes="0" SourcePath="bin\Debug\CPAR.Tester.exe.config" SelfReg="false"/>
+    <ROW File="CPAR.Tester.pdb" Component_="CPAR.Tester.exe" FileName="CPARTE~1.PDB|CPAR.Tester.pdb" Attributes="0" SourcePath="bin\Debug\CPAR.Tester.pdb" SelfReg="false"/>
+    <ROW File="DocumentFormat.OpenXml.dll" Component_="DocumentFormat.OpenXml.dll" FileName="DOCUME~1.DLL|DocumentFormat.OpenXml.dll" Attributes="0" SourcePath="bin\Debug\DocumentFormat.OpenXml.dll" SelfReg="false"/>
+    <ROW File="IronPython.dll" Component_="IronPython.dll" FileName="IRONPY~1.DLL|IronPython.dll" Attributes="0" SourcePath="bin\Debug\IronPython.dll" SelfReg="false"/>
+    <ROW File="Microsoft.Dynamic.dll" Component_="Microsoft.Dynamic.dll" FileName="MICROS~1.DLL|Microsoft.Dynamic.dll" Attributes="0" SourcePath="bin\Debug\Microsoft.Dynamic.dll" SelfReg="false"/>
+    <ROW File="Microsoft.Scripting.dll" Component_="Microsoft.Scripting.dll" FileName="MICROS~2.DLL|Microsoft.Scripting.dll" Attributes="0" SourcePath="bin\Debug\Microsoft.Scripting.dll" SelfReg="false"/>
+    <ROW File="ScienceFoundry.IO.Matlab.dll" Component_="ScienceFoundry.IO.Matlab.dll" FileName="SCIENC~1.DLL|ScienceFoundry.IO.Matlab.dll" Attributes="0" SourcePath="bin\Debug\ScienceFoundry.IO.Matlab.dll" SelfReg="false"/>
+    <ROW File="ScienceFoundry.IO.Matlab.pdb" Component_="ScienceFoundry.IO.Matlab.dll" FileName="SCIENC~1.PDB|ScienceFoundry.IO.Matlab.pdb" Attributes="0" SourcePath="bin\Debug\ScienceFoundry.IO.Matlab.pdb" SelfReg="false"/>
+    <ROW File="ScienceFoundry.UI.Wizard.dll" Component_="ScienceFoundry.UI.Wizard.dll" FileName="SCIENC~2.DLL|ScienceFoundry.UI.Wizard.dll" Attributes="0" SourcePath="bin\Debug\ScienceFoundry.UI.Wizard.dll" SelfReg="false"/>
+    <ROW File="ScienceFoundry.UI.Wizard.pdb" Component_="ScienceFoundry.UI.Wizard.dll" FileName="SCIENC~2.PDB|ScienceFoundry.UI.Wizard.pdb" Attributes="0" SourcePath="bin\Debug\ScienceFoundry.UI.Wizard.pdb" SelfReg="false"/>
+    <ROW File="IronPython.xml" Component_="cparexport.exe.config" FileName="IRONPY~1.XML|IronPython.xml" Attributes="0" SourcePath="bin\Debug\IronPython.xml" SelfReg="false"/>
+    <ROW File="Microsoft.Dynamic.xml" Component_="cparexport.exe.config" FileName="MICROS~1.XML|Microsoft.Dynamic.xml" Attributes="0" SourcePath="bin\Debug\Microsoft.Dynamic.xml" SelfReg="false"/>
+    <ROW File="Microsoft.Scripting.Metadata.dll" Component_="Microsoft.Scripting.Metadata.dll" FileName="MICROS~3.DLL|Microsoft.Scripting.Metadata.dll" Attributes="0" SourcePath="bin\Debug\Microsoft.Scripting.Metadata.dll" SelfReg="false"/>
+    <ROW File="Microsoft.Scripting.Metadata.xml" Component_="cparexport.exe.config" FileName="MICROS~2.XML|Microsoft.Scripting.Metadata.xml" Attributes="0" SourcePath="bin\Debug\Microsoft.Scripting.Metadata.xml" SelfReg="false"/>
+    <ROW File="Microsoft.Scripting.xml" Component_="cparexport.exe.config" FileName="MICROS~3.XML|Microsoft.Scripting.xml" Attributes="0" SourcePath="bin\Debug\Microsoft.Scripting.xml" SelfReg="false"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.BootstrOptComponent">
+    <ROW BootstrOptKey="GlobalOptions" DownloadFolder="[AppDataFolder][|Manufacturer]\[|ProductName]\prerequisites" Options="2"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.BootstrapperUISequenceComponent">
+    <ROW Action="AI_DetectSoftware" Sequence="101"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.BuildComponent">
+    <ROW BuildKey="DefaultBuild" BuildName="DefaultBuild" BuildOrder="1" BuildType="0" PackageFolder="..\..\..\Users\KristianHennings\Documents\Advanced Installer" Languages="en" InstallationType="4" CabsLocation="1" PackageType="1" FilesInsideExe="true" ExtractionFolder="[AppDataFolder][|Manufacturer]\[|ProductName] [|ProductVersion]\install" ExtUI="true" UseLargeSchema="true"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.DictionaryComponent">
+    <ROW Path="&lt;AI_DICTS&gt;ui.ail"/>
+    <ROW Path="&lt;AI_DICTS&gt;ui_en.ail"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.FragmentComponent">
+    <ROW Fragment="CommonUI.aip" Path="&lt;AI_FRAGS&gt;CommonUI.aip"/>
+    <ROW Fragment="FolderDlg.aip" Path="&lt;AI_THEMES&gt;classic\fragments\FolderDlg.aip"/>
+    <ROW Fragment="MaintenanceTypeDlg.aip" Path="&lt;AI_THEMES&gt;classic\fragments\MaintenanceTypeDlg.aip"/>
+    <ROW Fragment="MaintenanceWelcomeDlg.aip" Path="&lt;AI_THEMES&gt;classic\fragments\MaintenanceWelcomeDlg.aip"/>
+    <ROW Fragment="PreparePrereqDlg.aip" Path="&lt;AI_THEMES&gt;classic\fragments\PreparePrereqDlg.aip"/>
+    <ROW Fragment="PrerequisitesDlg.aip" Path="&lt;AI_THEMES&gt;classic\fragments\PrerequisitesDlg.aip"/>
+    <ROW Fragment="ProgressPrereqDlg.aip" Path="&lt;AI_THEMES&gt;classic\fragments\ProgressPrereqDlg.aip"/>
+    <ROW Fragment="SequenceDialogs.aip" Path="&lt;AI_THEMES&gt;classic\fragments\SequenceDialogs.aip"/>
+    <ROW Fragment="Sequences.aip" Path="&lt;AI_FRAGS&gt;Sequences.aip"/>
+    <ROW Fragment="StaticUIStrings.aip" Path="&lt;AI_FRAGS&gt;StaticUIStrings.aip"/>
+    <ROW Fragment="UI.aip" Path="&lt;AI_THEMES&gt;classic\fragments\UI.aip"/>
+    <ROW Fragment="Validation.aip" Path="&lt;AI_FRAGS&gt;Validation.aip"/>
+    <ROW Fragment="VerifyRemoveDlg.aip" Path="&lt;AI_THEMES&gt;classic\fragments\VerifyRemoveDlg.aip"/>
+    <ROW Fragment="VerifyRepairDlg.aip" Path="&lt;AI_THEMES&gt;classic\fragments\VerifyRepairDlg.aip"/>
+    <ROW Fragment="WelcomeDlg.aip" Path="&lt;AI_THEMES&gt;classic\fragments\WelcomeDlg.aip"/>
+    <ROW Fragment="WelcomePrereqDlg.aip" Path="&lt;AI_THEMES&gt;classic\fragments\WelcomePrereqDlg.aip"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiActionTextComponent">
+    <ROW Action="AI_DeleteLzma" Description="Deleting files extracted from archive" DescriptionLocId="ActionText.Description.AI_DeleteLzma" TemplateLocId="-"/>
+    <ROW Action="AI_DeleteRLzma" Description="Deleting files extracted from archive" DescriptionLocId="ActionText.Description.AI_DeleteLzma" TemplateLocId="-"/>
+    <ROW Action="AI_ExtractFiles" Description="Extracting files from archive" DescriptionLocId="ActionText.Description.AI_ExtractLzma" TemplateLocId="-"/>
+    <ROW Action="AI_ExtractLzma" Description="Extracting files from archive" DescriptionLocId="ActionText.Description.AI_ExtractLzma" TemplateLocId="-"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiAppSearchComponent">
+    <ROW Property="AI_SETUPEXEPATH" Signature_="AI_EXE_PATH_CU" Builds="DefaultBuild"/>
+    <ROW Property="AI_SETUPEXEPATH" Signature_="AI_EXE_PATH_LM" Builds="DefaultBuild"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiBinaryComponent">
+    <ROW Name="Prereq.dll" SourcePath="&lt;AI_CUSTACTS&gt;Prereq.dll"/>
+    <ROW Name="SoftwareDetector.dll" SourcePath="&lt;AI_CUSTACTS&gt;SoftwareDetector.dll"/>
+    <ROW Name="aicustact.dll" SourcePath="&lt;AI_CUSTACTS&gt;aicustact.dll"/>
+    <ROW Name="lzmaextractor.dll" SourcePath="&lt;AI_CUSTACTS&gt;lzmaextractor.dll"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiControlEventComponent">
+    <ROW Dialog_="WelcomeDlg" Control_="Next" Event="NewDialog" Argument="FolderDlg" Condition="AI_INSTALL" Ordering="1"/>
+    <ROW Dialog_="FolderDlg" Control_="Next" Event="NewDialog" Argument="VerifyReadyDlg" Condition="AI_INSTALL" Ordering="201"/>
+    <ROW Dialog_="FolderDlg" Control_="Back" Event="NewDialog" Argument="WelcomeDlg" Condition="AI_INSTALL" Ordering="1"/>
+    <ROW Dialog_="MaintenanceWelcomeDlg" Control_="Next" Event="NewDialog" Argument="MaintenanceTypeDlg" Condition="AI_MAINT" Ordering="99"/>
+    <ROW Dialog_="VerifyReadyDlg" Control_="Install" Event="EndDialog" Argument="Return" Condition="AI_MAINT" Ordering="198"/>
+    <ROW Dialog_="VerifyReadyDlg" Control_="Back" Event="NewDialog" Argument="CustomizeDlg" Condition="AI_MAINT" Ordering="202"/>
+    <ROW Dialog_="VerifyReadyDlg" Control_="Install" Event="EndDialog" Argument="Return" Condition="AI_INSTALL" Ordering="197"/>
+    <ROW Dialog_="VerifyReadyDlg" Control_="Back" Event="NewDialog" Argument="FolderDlg" Condition="AI_INSTALL" Ordering="201"/>
+    <ROW Dialog_="CustomizeDlg" Control_="Next" Event="NewDialog" Argument="VerifyReadyDlg" Condition="AI_MAINT" Ordering="101"/>
+    <ROW Dialog_="CustomizeDlg" Control_="Back" Event="NewDialog" Argument="MaintenanceTypeDlg" Condition="AI_MAINT" Ordering="1"/>
+    <ROW Dialog_="MaintenanceTypeDlg" Control_="ChangeButton" Event="NewDialog" Argument="CustomizeDlg" Condition="AI_MAINT" Ordering="501"/>
+    <ROW Dialog_="MaintenanceTypeDlg" Control_="Back" Event="NewDialog" Argument="MaintenanceWelcomeDlg" Condition="AI_MAINT" Ordering="1"/>
+    <ROW Dialog_="MaintenanceTypeDlg" Control_="RemoveButton" Event="NewDialog" Argument="VerifyRemoveDlg" Condition="AI_MAINT AND InstallMode=&quot;Remove&quot;" Ordering="601"/>
+    <ROW Dialog_="VerifyRemoveDlg" Control_="Back" Event="NewDialog" Argument="MaintenanceTypeDlg" Condition="AI_MAINT AND InstallMode=&quot;Remove&quot;" Ordering="1"/>
+    <ROW Dialog_="MaintenanceTypeDlg" Control_="RepairButton" Event="NewDialog" Argument="VerifyRepairDlg" Condition="AI_MAINT AND InstallMode=&quot;Repair&quot;" Ordering="601"/>
+    <ROW Dialog_="VerifyRepairDlg" Control_="Back" Event="NewDialog" Argument="MaintenanceTypeDlg" Condition="AI_MAINT AND InstallMode=&quot;Repair&quot;" Ordering="1"/>
+    <ROW Dialog_="VerifyRepairDlg" Control_="Repair" Event="EndDialog" Argument="Return" Condition="AI_MAINT AND InstallMode=&quot;Repair&quot;" Ordering="399" Options="1"/>
+    <ROW Dialog_="VerifyRemoveDlg" Control_="Remove" Event="EndDialog" Argument="Return" Condition="AI_MAINT AND InstallMode=&quot;Remove&quot;" Ordering="299" Options="1"/>
+    <ROW Dialog_="PatchWelcomeDlg" Control_="Next" Event="NewDialog" Argument="VerifyReadyDlg" Condition="AI_PATCH" Ordering="201"/>
+    <ROW Dialog_="ResumeDlg" Control_="Install" Event="EndDialog" Argument="Return" Condition="AI_RESUME" Ordering="299"/>
+    <ROW Dialog_="WelcomePrereqDlg" Control_="Next" Event="NewDialog" Argument="PrerequisitesDlg" Condition="AI_BOOTSTRAPPER" Ordering="1"/>
+    <ROW Dialog_="PrerequisitesDlg" Control_="Next" Event="EndDialog" Argument="Return" Condition="AI_BOOTSTRAPPER" Ordering="1"/>
+    <ROW Dialog_="PrerequisitesDlg" Control_="Back" Event="NewDialog" Argument="WelcomePrereqDlg" Condition="AI_BOOTSTRAPPER" Ordering="1"/>
+    <ROW Dialog_="VerifyReadyDlg" Control_="Install" Event="EndDialog" Argument="Return" Condition="AI_PATCH" Ordering="199"/>
+    <ROW Dialog_="VerifyReadyDlg" Control_="Back" Event="NewDialog" Argument="PatchWelcomeDlg" Condition="AI_PATCH" Ordering="203"/>
+    <ROW Dialog_="CustomizeDlg" Control_="Next" Event="DoAction" Argument="AI_InstallModeCheck" Condition="AI_MAINT" Ordering="100" MsiKey="CustomizeDlg#Next#DoAction#AI_InstallModeCheck#AI_MAINT"/>
+    <ROW Dialog_="FatalError" Control_="Finish" Event="DoAction" Argument="AI_SHOW_LOG" Condition="(MsiLogFileLocation AND AI_LOG_CHECKBOX)" Ordering="101" MsiKey="FatalError#Finish#DoAction#AI_SHOW_LOG#(MsiLogFileLocation AND AI_LOG_CHECKBOX)"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiCreateFolderComponent">
+    <ROW Directory_="SHORTCUTDIR" Component_="SHORTCUTDIR" ManualDelete="false"/>
+    <ROW Directory_="APPDIR" Component_="APPDIR" ManualDelete="true"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiCustActComponent">
+    <ROW Action="AI_AppSearchEx" Type="1" Source="Prereq.dll" Target="DoAppSearchEx"/>
+    <ROW Action="AI_BACKUP_AI_SETUPEXEPATH" Type="51" Source="AI_SETUPEXEPATH_ORIGINAL" Target="[AI_SETUPEXEPATH]"/>
+    <ROW Action="AI_DATA_SETTER" Type="51" Source="AI_ExtractFiles" Target="[AI_SETUPEXEPATH]"/>
+    <ROW Action="AI_DOWNGRADE" Type="19" Target="4010"/>
+    <ROW Action="AI_DeleteCadLzma" Type="51" Source="AI_DeleteLzma" Target="[AI_SETUPEXEPATH]"/>
+    <ROW Action="AI_DeleteLzma" Type="1025" Source="lzmaextractor.dll" Target="DeleteLZMAFiles"/>
+    <ROW Action="AI_DeleteRCadLzma" Type="51" Source="AI_DeleteRLzma" Target="[AI_SETUPEXEPATH]"/>
+    <ROW Action="AI_DeleteRLzma" Type="1281" Source="lzmaextractor.dll" Target="DeleteLZMAFiles"/>
+    <ROW Action="AI_DetectSoftware" Type="257" Source="SoftwareDetector.dll" Target="OnDetectSoftware"/>
+    <ROW Action="AI_DpiContentScale" Type="1" Source="aicustact.dll" Target="DpiContentScale"/>
+    <ROW Action="AI_EnableDebugLog" Type="321" Source="aicustact.dll" Target="EnableDebugLog"/>
+    <ROW Action="AI_EstimateExtractFiles" Type="1" Source="Prereq.dll" Target="EstimateExtractFiles"/>
+    <ROW Action="AI_ExtractCadLzma" Type="51" Source="AI_ExtractLzma" Target="[AI_SETUPEXEPATH]"/>
+    <ROW Action="AI_ExtractFiles" Type="1025" Source="Prereq.dll" Target="ExtractSourceFiles" AdditionalSeq="AI_DATA_SETTER"/>
+    <ROW Action="AI_ExtractLzma" Type="1025" Source="lzmaextractor.dll" Target="ExtractLZMAFiles"/>
+    <ROW Action="AI_FindExeLzma" Type="1" Source="lzmaextractor.dll" Target="FindEXE"/>
+    <ROW Action="AI_InstallModeCheck" Type="1" Source="aicustact.dll" Target="UpdateInstallMode" WithoutSeq="true"/>
+    <ROW Action="AI_PREPARE_UPGRADE" Type="65" Source="aicustact.dll" Target="PrepareUpgrade"/>
+    <ROW Action="AI_RESTORE_AI_SETUPEXEPATH" Type="51" Source="AI_SETUPEXEPATH" Target="[AI_SETUPEXEPATH_ORIGINAL]"/>
+    <ROW Action="AI_RESTORE_LOCATION" Type="65" Source="aicustact.dll" Target="RestoreLocation"/>
+    <ROW Action="AI_ResolveKnownFolders" Type="1" Source="aicustact.dll" Target="AI_ResolveKnownFolders"/>
+    <ROW Action="AI_SHOW_LOG" Type="65" Source="aicustact.dll" Target="LaunchLogFile" WithoutSeq="true"/>
+    <ROW Action="AI_STORE_LOCATION" Type="51" Source="ARPINSTALLLOCATION" Target="[APPDIR]"/>
+    <ROW Action="SET_APPDIR" Type="307" Source="APPDIR" Target="[ProgramFilesFolder][Manufacturer]\[ProductName]"/>
+    <ROW Action="SET_SHORTCUTDIR" Type="307" Source="SHORTCUTDIR" Target="[ProgramMenuFolder][ProductName]"/>
+    <ROW Action="SET_TARGETDIR_TO_APPDIR" Type="51" Source="TARGETDIR" Target="[APPDIR]"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiExtComponent">
+    <ROW Extension="edfx" Component_="cparexport.exe" ProgId_="[|Manufacturer].[|ProductName]" Feature_="MainFeature" Options="32"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiFeatCompsComponent">
+    <ROW Feature_="MainFeature" Component_="AI_ExePath"/>
+    <ROW Feature_="MainFeature" Component_="CPAR.Communication.dll"/>
+    <ROW Feature_="MainFeature" Component_="CPAR.Core.dll"/>
+    <ROW Feature_="MainFeature" Component_="CPAR.Logging.dll"/>
+    <ROW Feature_="MainFeature" Component_="CPAR.Runner.exe"/>
+    <ROW Feature_="MainFeature" Component_="CPAR.Tester.exe"/>
+    <ROW Feature_="MainFeature" Component_="ClosedXML.dll"/>
+    <ROW Feature_="MainFeature" Component_="DocumentFormat.OpenXml.dll"/>
+    <ROW Feature_="MainFeature" Component_="IronPython.dll"/>
+    <ROW Feature_="MainFeature" Component_="Microsoft.Dynamic.dll"/>
+    <ROW Feature_="MainFeature" Component_="Microsoft.Scripting.dll"/>
+    <ROW Feature_="MainFeature" Component_="ProductInformation"/>
+    <ROW Feature_="MainFeature" Component_="SHORTCUTDIR"/>
+    <ROW Feature_="MainFeature" Component_="ScienceFoundry.IO.Matlab.dll"/>
+    <ROW Feature_="MainFeature" Component_="ScienceFoundry.UI.Wizard.dll"/>
+    <ROW Feature_="MainFeature" Component_="cparexport.exe"/>
+    <ROW Feature_="MainFeature" Component_="cparexport.exe.config"/>
+    <ROW Feature_="MainFeature" Component_="APPDIR"/>
+    <ROW Feature_="MainFeature" Component_="Microsoft.Scripting.Metadata.dll"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiInstExSeqComponent">
+    <ROW Action="AI_DOWNGRADE" Condition="AI_NEWERPRODUCTFOUND AND (UILevel &lt;&gt; 5)" Sequence="210"/>
+    <ROW Action="AI_RESTORE_LOCATION" Condition="APPDIR=&quot;&quot;" Sequence="749"/>
+    <ROW Action="AI_STORE_LOCATION" Condition="(Not Installed) OR REINSTALL" Sequence="1501"/>
+    <ROW Action="AI_PREPARE_UPGRADE" Condition="AI_UPGRADE=&quot;No&quot; AND (Not Installed)" Sequence="1399"/>
+    <ROW Action="AI_ResolveKnownFolders" Sequence="52"/>
+    <ROW Action="AI_EnableDebugLog" Sequence="51"/>
+    <ROW Action="AI_DetectSoftware" Sequence="103"/>
+    <ROW Action="AI_AppSearchEx" Sequence="102"/>
+    <ROW Action="AI_BACKUP_AI_SETUPEXEPATH" Sequence="99" Builds="DefaultBuild"/>
+    <ROW Action="AI_RESTORE_AI_SETUPEXEPATH" Condition="AI_SETUPEXEPATH_ORIGINAL" Sequence="101" Builds="DefaultBuild"/>
+    <ROW Action="AI_DeleteCadLzma" Condition="SETUPEXEDIR=&quot;&quot; AND Installed AND (REMOVE&lt;&gt;&quot;ALL&quot;) AND (AI_INSTALL_MODE&lt;&gt;&quot;Remove&quot;) AND (NOT PATCH)" Sequence="199" Builds="DefaultBuild"/>
+    <ROW Action="AI_DeleteRCadLzma" Condition="SETUPEXEDIR=&quot;&quot; AND Installed AND (REMOVE&lt;&gt;&quot;ALL&quot;) AND (AI_INSTALL_MODE&lt;&gt;&quot;Remove&quot;) AND (NOT PATCH)" Sequence="198" Builds="DefaultBuild"/>
+    <ROW Action="AI_ExtractCadLzma" Condition="SETUPEXEDIR=&quot;&quot; AND Installed AND (REMOVE&lt;&gt;&quot;ALL&quot;) AND (AI_INSTALL_MODE&lt;&gt;&quot;Remove&quot;) AND (NOT PATCH)" Sequence="197" Builds="DefaultBuild"/>
+    <ROW Action="AI_FindExeLzma" Condition="SETUPEXEDIR=&quot;&quot; AND Installed AND (REMOVE&lt;&gt;&quot;ALL&quot;) AND (AI_INSTALL_MODE&lt;&gt;&quot;Remove&quot;) AND (NOT PATCH)" Sequence="196" Builds="DefaultBuild"/>
+    <ROW Action="AI_ExtractLzma" Condition="SETUPEXEDIR=&quot;&quot; AND Installed AND (REMOVE&lt;&gt;&quot;ALL&quot;) AND (AI_INSTALL_MODE&lt;&gt;&quot;Remove&quot;) AND (NOT PATCH)" Sequence="1549" Builds="DefaultBuild"/>
+    <ROW Action="AI_DeleteRLzma" Condition="SETUPEXEDIR=&quot;&quot; AND Installed AND (REMOVE&lt;&gt;&quot;ALL&quot;) AND (AI_INSTALL_MODE&lt;&gt;&quot;Remove&quot;) AND (NOT PATCH)" Sequence="1548" Builds="DefaultBuild"/>
+    <ROW Action="AI_DeleteLzma" Condition="SETUPEXEDIR=&quot;&quot; AND Installed AND (REMOVE&lt;&gt;&quot;ALL&quot;) AND (AI_INSTALL_MODE&lt;&gt;&quot;Remove&quot;) AND (NOT PATCH)" Sequence="6599" Builds="DefaultBuild"/>
+    <ROW Action="AI_ExtractFiles" Sequence="3998" Builds="DefaultBuild"/>
+    <ROW Action="AI_DATA_SETTER" Sequence="3997"/>
+    <ROW Action="AI_EstimateExtractFiles" Sequence="3999" Builds="DefaultBuild"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiInstallUISequenceComponent">
+    <ROW Action="AI_RESTORE_LOCATION" Condition="APPDIR=&quot;&quot;" Sequence="749"/>
+    <ROW Action="AI_ResolveKnownFolders" Sequence="53"/>
+    <ROW Action="AI_DpiContentScale" Sequence="52"/>
+    <ROW Action="AI_EnableDebugLog" Sequence="51"/>
+    <ROW Action="AI_DetectSoftware" Sequence="103"/>
+    <ROW Action="AI_AppSearchEx" Sequence="102"/>
+    <ROW Action="AI_BACKUP_AI_SETUPEXEPATH" Sequence="99"/>
+    <ROW Action="AI_RESTORE_AI_SETUPEXEPATH" Condition="AI_SETUPEXEPATH_ORIGINAL" Sequence="101"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiLaunchConditionsComponent">
+    <ROW Condition="(VersionNT &lt;&gt; 400)" Description="[ProductName] cannot be installed on [WindowsTypeNT40Display]." DescriptionLocId="AI.LaunchCondition.NoNT40" IsPredefined="true" Builds="DefaultBuild"/>
+    <ROW Condition="(VersionNT &lt;&gt; 500)" Description="[ProductName] cannot be installed on [WindowsTypeNT50Display]." DescriptionLocId="AI.LaunchCondition.NoNT50" IsPredefined="true" Builds="DefaultBuild"/>
+    <ROW Condition="(VersionNT64 OR ((VersionNT &lt;&gt; 501) OR (ServicePackLevel = 3))) AND ((VersionNT &lt;&gt; 502) OR (ServicePackLevel = 2))" Description="[ProductName] cannot be installed on [WindowsTypeNT5XDisplay]." DescriptionLocId="AI.LaunchCondition.NoNT5X" IsPredefined="true" Builds="DefaultBuild"/>
+    <ROW Condition="AI_DETECTED_DOTNET_VERSION &gt;= AI_REQUIRED_DOTNET_VERSION" Description="[ProductName] cannot be installed on systems with .NET Framework version lower than [AI_REQUIRED_DOTNET_DISPLAY]." DescriptionLocId="AI.LaunchCondition.DotNET" IsPredefined="true" Builds="DefaultBuild"/>
+    <ROW Condition="SETUPEXEDIR OR (REMOVE=&quot;ALL&quot;)" Description="This package can only be run from a bootstrapper." DescriptionLocId="AI.LaunchCondition.RequireBootstrapper" IsPredefined="true" Builds="DefaultBuild"/>
+    <ROW Condition="VersionNT" Description="[ProductName] cannot be installed on [WindowsType9XDisplay]." DescriptionLocId="AI.LaunchCondition.No9X" IsPredefined="true" Builds="DefaultBuild"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiProgIdComponent">
+    <ROW ProgId="[|Manufacturer].[|ProductName]"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiRegLocatorComponent">
+    <ROW Signature_="AI_EXE_PATH_CU" Root="1" Key="Software\Caphyon\Advanced Installer\LZMA\[ProductCode]\[ProductVersion]" Name="AI_ExePath" Type="2"/>
+    <ROW Signature_="AI_EXE_PATH_LM" Root="2" Key="Software\Caphyon\Advanced Installer\LZMA\[ProductCode]\[ProductVersion]" Name="AI_ExePath" Type="2"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiRegsComponent">
+    <ROW Registry="AI_ExePath" Root="-1" Key="Software\Caphyon\Advanced Installer\LZMA\[ProductCode]\[ProductVersion]" Name="AI_ExePath" Value="[AI_SETUPEXEPATH]" Component_="AI_ExePath"/>
+    <ROW Registry="Path" Root="-1" Key="Software\[Manufacturer]\[ProductName]" Name="Path" Value="[APPDIR]" Component_="ProductInformation"/>
+    <ROW Registry="Version" Root="-1" Key="Software\[Manufacturer]\[ProductName]" Name="Version" Value="[ProductVersion]" Component_="ProductInformation"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiShortsComponent">
+    <ROW Shortcut="CPAR.Runner.exe" Directory_="SHORTCUTDIR" Name="CPARRU~1.EXE|CPAR.Runner.exe" Component_="CPAR.Runner.exe" Target="[#CPAR.Runner.exe]" Description="CPAR.Runner.exe" Hotkey="0" IconIndex="0" ShowCmd="1" WkDir="APPDIR"/>
+    <ROW Shortcut="CPAR.Runner.exe_1" Directory_="DesktopFolder" Name="CPARRU~1.EXE|CPAR.Runner.exe" Component_="CPAR.Runner.exe" Target="[#CPAR.Runner.exe]" Description="CPAR.Runner.exe" Hotkey="0" IconIndex="0" ShowCmd="1" WkDir="APPDIR"/>
+    <ROW Shortcut="CPAR.Tester.exe" Directory_="SHORTCUTDIR" Name="CPARTE~1.EXE|CPAR.Tester.exe" Component_="CPAR.Tester.exe" Target="[#CPAR.Tester.exe]" Description="CPAR.Tester.exe" Hotkey="0" IconIndex="0" ShowCmd="1" WkDir="APPDIR"/>
+    <ROW Shortcut="CPAR.Tester.exe_1" Directory_="DesktopFolder" Name="CPARTE~1.EXE|CPAR.Tester.exe" Component_="CPAR.Tester.exe" Target="[#CPAR.Tester.exe]" Description="CPAR.Tester.exe" Hotkey="0" IconIndex="0" ShowCmd="1" WkDir="APPDIR"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiThemeComponent">
+    <ATTRIBUTE name="UsedTheme" value="classic"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiUpgradeComponent">
+    <ROW UpgradeCode="[|UpgradeCode]" VersionMin="0.0.1" VersionMax="[|ProductVersion]" Attributes="257" ActionProperty="OLDPRODUCTS"/>
+    <ROW UpgradeCode="[|UpgradeCode]" VersionMin="[|ProductVersion]" Attributes="2" ActionProperty="AI_NEWERPRODUCTFOUND"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiVerbComponent">
+    <ROW Extension_="edfx" Component_="cparexport.exe" Verb="open" Sequence="0" Command="&amp;Open" Argument="&quot;%1&quot;"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.PreReqComponent">
+    <ROW PrereqKey="B8AA522D638C46D9A84AE3AEFBE7A086" DisplayName=".NET Framework 4.7.1" SetupFileUrl="https://download.microsoft.com/download/9/E/6/9E63300C-0941-4B45-A0EC-0008F96DD480/NDP471-KB4033342-x86-x64-AllOS-ENU.exe" Location="1" ExactSize="68742112" WinNTVersions="Windows XP SP3 x86, Windows Server 2003 SP2 x86, Windows Vista x86, Windows Server 2008 x86, Windows 7 RTM x86, Windows 10 version 1507 x86, Windows 10 version 1511 x86, Windows 10 version 1709 x86" WinNT64Versions="Windows XP SP2 x64, Windows Server 2003 SP2 x64, Windows Vista x64, Windows Server 2008 x64, Windows 7 RTM x64, Windows Server 2008 R2 RTM x64, Windows 10 version 1507 x64, Windows 10 version 1511 x64, Windows 10 version 1709 x64" Operator="1" NoUiComLine="/q /norestart" Options="xy" MD5="660e1a104f209f3cdb55b6d4e9ffa475" TargetName=".NET Framework 4.7.1"/>
+    <ATTRIBUTE name="PrereqsOrder" value="B8AA522D638C46D9A84AE3AEFBE7A086"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.PreReqSearchComponent">
+    <ROW SearchKey="B8AA522D638C46D9A84AE3AEFBE7A086Release" Prereq="B8AA522D638C46D9A84AE3AEFBE7A086" SearchType="9" SearchString="HKLM\SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full\Release" RefContent="G461309" Order="1" Property="PreReqSearch_B8AA522D638C46D9A84AE3"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.SynchronizedFolderComponent">
+    <ROW Directory_="APPDIR" SourcePath="bin\Debug" Feature="MainFeature" ExcludePattern="*~|#*#|%*%|._|CVS|.cvsignore|SCCS|vssver.scc|mssccprj.scc|vssver2.scc|.svn|.DS_Store" ExcludeFlags="6"/>
+  </COMPONENT>
+</DOCUMENT>

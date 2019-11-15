@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<script xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="testscript.xsd"
+          name="Sample Script">
+  <DeviceIdentification/>
+  <KickWatchdog/>
+  <ReadCalibration calibrator="ID_PRESSURE01_CALIBRATOR" />
+  <WriteCalibration calibrator="ID_VAS_SCORE_CALIBRATOR" B="0" A="1.0859375" />
+  <ReadCalibration calibrator="ID_VAS_SCORE_CALIBRATOR" />
+  <SetWaveformProgram channel="0" repeat="10">
+    <instruction instruction-type="INC" argument="0.1" steps="2550" />
+    <instruction instruction-type="NOP" argument="0" steps="255"/>
+    <instruction instruction-type="DEC" argument="1" steps="255"/>
+  </SetWaveformProgram>
+  <StartStimulation stop-criterion="STOP_CRITERION_ON_BUTTON_VAS" />
+</script>

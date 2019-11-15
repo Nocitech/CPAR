@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<protocol xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="protocol.xsd"
+          name="Sample Protocol">
+  <description>
+    This is a sample description
+  </description>  
+  <tests>
+    <stimulus-response ID="TEST01" name="Test 1" vas-pdt="0.5" delta-pressure="1" pressure-limit="100" stop-mode="STOP_ON_VAS_AND_BUTTON" second-cuff="false"/>    
+    <temporal-summation ID="TEST02" name="Test 2" no-of-stimuli="10" pressure-static="4" t-off="5" t-on="1" second-cuff="false">
+      <pressure-stimulate test-id="TEST01"  calculation-type="VAS" value="5"/>
+    </temporal-summation>
+  </tests>
+</protocol>

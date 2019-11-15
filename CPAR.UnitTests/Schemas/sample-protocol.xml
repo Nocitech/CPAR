@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<protocol xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="c:\cpar\xsd\protocol.xsd"
+          name="Sample Protocol">
+  <description>
+    This is a sample description
+  </description>  
+  <tests>
+    <stimulus-response ID="TEST01" 
+                       name="Stimulus-Response" 
+                       vas-pdt="0.5" 
+                       delta-pressure="1" 
+                       pressure-limit="100" 
+                       stop-mode="vas-and-button" 
+                       second-cuff="false"/>    
+    
+    <temporal-summation ID="TEST02" 
+                        name="Temporal Summation" 
+                        no-of-stimuli="10" 
+                        pressure-static="4" 
+                        t-off="5" 
+                        t-on="1" 
+                        second-cuff="true">
+      <pressure-stimulate test-id="TEST01"  
+                          calculation-type="vas" 
+                          value="5" 
+                          description="Stimulating pressure"/>
+    </temporal-summation>
+    <conditioned-pain-modulation ID="TEST03"
+                                 name="Conditioned Pain Modulation"
+                                 vas-pdt="0.5"
+                                 delta-pressure="1"
+                                 pressure-limit="100"
+                                 stop-mode="vas-and-button"
+                                 delta-cond-pressure="10">
+      <cond-pressure calculation-type="external" 
+                     description="Conditoning pressure" 
+                     value="50" />
+    </conditioned-pain-modulation>                                 
+  </tests>
+</protocol>

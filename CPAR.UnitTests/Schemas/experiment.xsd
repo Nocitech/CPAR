@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="experiment" nillable="true" type="Experiment" />
+  <xs:complexType name="Experiment">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="description" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="experimenters" type="ArrayOfExperimenter" />
+      <xs:element minOccurs="0" maxOccurs="1" name="factors" type="ArrayOfFactor" />
+    </xs:sequence>
+    <xs:attribute name="name" type="xs:string" />
+    <xs:attribute name="protocol" type="xs:string" />
+  </xs:complexType>
+  <xs:complexType name="ArrayOfExperimenter">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="experimenter" nillable="true" type="Experimenter" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Experimenter">
+    <xs:attribute name="name" type="xs:string" />
+    <xs:attribute name="title" type="xs:string" />
+    <xs:attribute name="affiliation" type="xs:string" />
+    <xs:attribute name="mail" type="xs:string" />
+    <xs:attribute name="phone" type="xs:string" />
+  </xs:complexType>
+  <xs:complexType name="ArrayOfFactor">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="factor" nillable="true" type="Factor" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Factor">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="level" type="Level" />
+    </xs:sequence>
+    <xs:attribute name="name" type="xs:string" />
+    <xs:attribute name="type" type="FactorType" use="required" />
+  </xs:complexType>
+  <xs:complexType name="Level">
+    <xs:attribute name="name" type="xs:string" />
+  </xs:complexType>
+  <xs:simpleType name="FactorType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="between-subjects" />
+      <xs:enumeration value="within-subjects" />
+    </xs:restriction>
+  </xs:simpleType>
+</xs:schema>

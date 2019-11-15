@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="script" nillable="true" type="TestScript" />
+  <xs:complexType name="TestScript">
+    <xs:sequence>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element minOccurs="0" maxOccurs="1" name="DeviceIdentification" type="DeviceIdentification" />
+        <xs:element minOccurs="0" maxOccurs="1" name="KickWatchdog" type="KickWatchdog" />
+        <xs:element minOccurs="0" maxOccurs="1" name="ReadCalibration" type="ReadCalibration" />
+        <xs:element minOccurs="0" maxOccurs="1" name="ResetDevice" type="ResetDevice" />
+        <xs:element minOccurs="0" maxOccurs="1" name="SetWaveformProgram" type="SetWaveformProgram" />
+        <xs:element minOccurs="0" maxOccurs="1" name="StartStimulation" type="StartStimulation" />
+        <xs:element minOccurs="0" maxOccurs="1" name="StopStimulation" type="StopStimulation" />
+        <xs:element minOccurs="0" maxOccurs="1" name="WriteCalibration" type="WriteCalibration" />
+        <xs:element minOccurs="0" maxOccurs="1" name="WriteSerialNumber" type="WriteSerialNumber" />
+      </xs:choice>
+    </xs:sequence>
+    <xs:attribute name="name" type="xs:string" />
+  </xs:complexType>
+  <xs:complexType name="DeviceIdentification">
+    <xs:complexContent mixed="false">
+      <xs:extension base="Function" />
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="Function" abstract="true" />
+  <xs:complexType name="WriteSerialNumber">
+    <xs:complexContent mixed="false">
+      <xs:extension base="Function">
+        <xs:attribute name="serial-number" type="xs:unsignedShort" use="required" />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="WriteCalibration">
+    <xs:complexContent mixed="false">
+      <xs:extension base="Function">
+        <xs:attribute name="calibrator" type="CalibratorID" use="required" />
+        <xs:attribute name="A" type="xs:double" use="required" />
+        <xs:attribute name="B" type="xs:double" use="required" />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:simpleType name="CalibratorID">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="ID_PRESSURE01_CALIBRATOR" />
+      <xs:enumeration value="ID_PRESSURE02_CALIBRATOR" />
+      <xs:enumeration value="ID_VAS_SCORE_CALIBRATOR" />
+      <xs:enumeration value="ID_SUPPLY_PRESSURE_CALIBRATOR" />
+      <xs:enumeration value="ID_TARGET01_CALIBRATOR" />
+      <xs:enumeration value="ID_TARGET02_CALIBRATOR" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="StopStimulation">
+    <xs:complexContent mixed="false">
+      <xs:extension base="Function" />
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="StartStimulation">
+    <xs:complexContent mixed="false">
+      <xs:extension base="Function">
+        <xs:attribute name="stop-criterion" type="StopCriterion" use="required" />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:simpleType name="StopCriterion">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="STOP_CRITERION_ON_BUTTON_VAS" />
+      <xs:enumeration value="STOP_CRITERION_ON_BUTTON" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="SetWaveformProgram">
+    <xs:complexContent mixed="false">
+      <xs:extension base="Function">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="instruction" type="Instruction" />
+        </xs:sequence>
+        <xs:attribute name="channel" type="xs:unsignedByte" use="required" />
+        <xs:attribute name="repeat" type="xs:unsignedByte" use="required" />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="Instruction">
+    <xs:attribute name="instruction-type" type="InstructionType" use="required" />
+    <xs:attribute name="argument" type="xs:double" use="required" />
+    <xs:attribute name="steps" type="xs:unsignedShort" use="required" />
+  </xs:complexType>
+  <xs:simpleType name="InstructionType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="NOP" />
+      <xs:enumeration value="INC" />
+      <xs:enumeration value="DEC" />
+      <xs:enumeration value="STEP" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="ResetDevice">
+    <xs:complexContent mixed="false">
+      <xs:extension base="Function" />
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="ReadCalibration">
+    <xs:complexContent mixed="false">
+      <xs:extension base="Function">
+        <xs:attribute name="calibrator" type="CalibratorID" use="required" />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="KickWatchdog">
+    <xs:complexContent mixed="false">
+      <xs:extension base="Function" />
+    </xs:complexContent>
+  </xs:complexType>
+</xs:schema>

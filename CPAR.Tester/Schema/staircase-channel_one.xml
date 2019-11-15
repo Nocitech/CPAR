@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<script xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="testscript.xsd"
+          name="Square Channel One">
+  <SetWaveformProgram channel="0" repeat="10">
+    <instruction instruction-type="STEP" argument="10" steps="20" />
+    <instruction instruction-type="STEP" argument="40" steps="20" />
+    <instruction instruction-type="STEP" argument="60" steps="20" />
+    <instruction instruction-type="STEP" argument="80" steps="20" />
+    <instruction instruction-type="STEP" argument="100" steps="20" />
+    <instruction instruction-type="STEP" argument="120" steps="20" />
+    <instruction instruction-type="STEP" argument="140" steps="20" />
+    <instruction instruction-type="STEP" argument="160" steps="20" />
+    <instruction instruction-type="STEP" argument="180" steps="20" />
+    <instruction instruction-type="STEP" argument="200" steps="20" />
+  </SetWaveformProgram>
+  <StartStimulation stop-criterion="STOP_CRITERION_ON_BUTTON_VAS" />
+</script>

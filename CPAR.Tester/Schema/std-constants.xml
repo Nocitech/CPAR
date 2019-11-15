@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<script xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="testscript.xsd"
+          name="Standard Calibration Constants">
+  <DeviceIdentification />
+  <WriteCalibration calibrator="ID_PRESSURE01_CALIBRATOR" A="1.25" B="-63.75"/>
+  <ReadCalibration calibrator="ID_PRESSURE01_CALIBRATOR"/>
+  <WriteCalibration calibrator="ID_PRESSURE02_CALIBRATOR" A="1.25" B="-63.75"/>
+  <ReadCalibration calibrator="ID_PRESSURE02_CALIBRATOR"/>
+</script>

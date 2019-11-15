@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="export" nillable="true" type="Exporter" />
+  <xs:complexType name="Exporter">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="exports" type="ArrayOfChoice1" />
+    </xs:sequence>
+    <xs:attribute name="export-path" type="xs:string" />
+  </xs:complexType>
+  <xs:complexType name="ArrayOfChoice1">
+    <xs:choice minOccurs="0" maxOccurs="unbounded">
+      <xs:element minOccurs="1" maxOccurs="1" name="spss" nillable="true" type="SPSSExporter" />
+      <xs:element minOccurs="1" maxOccurs="1" name="matlab" nillable="true" type="MatlabExporter" />
+    </xs:choice>
+  </xs:complexType>
+  <xs:complexType name="SPSSExporter">
+    <xs:complexContent mixed="false">
+      <xs:extension base="ExportMethod">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="output-variable" type="OutputScript" />
+        </xs:sequence>
+        <xs:attribute name="filename" type="xs:string" />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="ExportMethod" abstract="true" />
+  <xs:complexType name="MatlabExporter">
+    <xs:complexContent mixed="false">
+      <xs:extension base="ExportMethod">
+        <xs:attribute name="filename" type="xs:string" />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="OutputScript">
+    <xs:attribute name="script" type="xs:string" />
+    <xs:attribute name="name" type="xs:string" />
+  </xs:complexType>
+</xs:schema>
