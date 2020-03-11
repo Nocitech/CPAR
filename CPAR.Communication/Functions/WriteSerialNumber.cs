@@ -12,7 +12,7 @@ namespace CPAR.Communication.Functions
     {
         private static byte ResponseLength = 0;
 
-        public WriteSerialNumber() : base(0x05, 2) { }
+        public WriteSerialNumber() : base(0x15, 2) { }
 
         protected override bool IsResponseValid()
         {

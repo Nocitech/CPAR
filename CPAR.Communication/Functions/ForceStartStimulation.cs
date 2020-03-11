@@ -20,7 +20,7 @@ namespace CPAR.Communication.Functions
         private static byte ResponseLength = 0;
 
         public ForceStartStimulation() :
-            base(0x0A, 1)
+            base(0x1A, 1)
         {
             Criterion = StopCriterion.STOP_CRITERION_ON_BUTTON_VAS;
         }

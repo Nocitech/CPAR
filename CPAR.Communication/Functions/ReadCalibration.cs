@@ -11,7 +11,7 @@ namespace CPAR.Communication.Functions
     public class ReadCalibration : 
         Function
     {
-        public static byte FUNCTION_CODE = 0x07;
+        public static byte FUNCTION_CODE = 0x17;
         private static byte CALIBRATION_RECORD_SIZE = 10;
         private static byte VALID_MARKER = 0xC9;
         private static byte ResponseLength = CALIBRATION_RECORD_SIZE;
