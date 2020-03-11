@@ -39,16 +39,6 @@ namespace CPAR.Communication.Functions
                 return response.GetString(16, 24);
             }
         }
-        /*
-        [Category("Device")]
-        [Description("The identifier of the device")]
-        public UInt16 DeviceID
-        {
-            get
-            {
-                return response.GetUInt16(4);
-            }
-        }*/
 
         [Category("Device")]
         [Description("The type of device that is connected")]
@@ -79,7 +69,6 @@ namespace CPAR.Communication.Functions
                 return response.GetString(40, 24);
             }
         }
-
 
         [Category("Firmware")]
         [Description("Major Version")]
