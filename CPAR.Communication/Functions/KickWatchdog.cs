@@ -11,7 +11,7 @@ namespace CPAR.Communication.Functions
     {
         private static byte ResponseLength = 4;
 
-        public KickWatchdog() : base(0x02, 0) { }
+        public KickWatchdog() : base(0x08, 0) { }
 
         protected override bool IsResponseValid()
         {
@@ -31,7 +31,7 @@ namespace CPAR.Communication.Functions
 
         public override string ToString()
         {
-            return "[0x02] Kick Watchdog";
+            return "[0x08] Kick Watchdog";
         }
 
         public override string SerializeResponse()

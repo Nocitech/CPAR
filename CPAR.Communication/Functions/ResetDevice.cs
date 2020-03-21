@@ -11,7 +11,7 @@ namespace CPAR.Communication.Functions
     {
         private static byte ResponseLength = 0;
 
-        public ResetDevice() : base(0x19, 0) { }
+        public ResetDevice() : base(0x09, 0) { }
 
         protected override bool IsResponseValid()
         {

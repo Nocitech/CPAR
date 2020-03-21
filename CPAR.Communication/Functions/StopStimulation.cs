@@ -11,7 +11,7 @@ namespace CPAR.Communication.Functions
     {
         private static byte ResponseLength = 0;
 
-        public StopStimulation() : base(0x14, 0) { }
+        public StopStimulation() : base(0x04, 0) { }
 
         protected override bool IsResponseValid()
         {

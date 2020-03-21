@@ -10,7 +10,7 @@ namespace CPAR.Communication.Functions
     public class WriteCalibration :
         Function
     {
-        public static byte FUNCTION_CODE = 0x16;
+        public static byte FUNCTION_CODE = 0x06;
         private static byte CALIBRATION_RECORD_SIZE = 10;
         private static byte VALID_MARKER = 0xC9;
         private static byte ResponseLength = 0;
