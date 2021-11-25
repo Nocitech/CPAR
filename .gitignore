@@ -25,6 +25,7 @@ bld/
 [Ll]og/
 CPAR Installer, Rev. 002-cache
 CPAR Installer, Rev. 002-SetupFiles
+ExeBuildSetupFiles
 
 # Visual Studio 2015/2017 cache/options directory
 .vs/
