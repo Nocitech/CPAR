@@ -56,16 +56,9 @@
     <Compile Include="Functions\DeviceIdentification.cs" />
     <Compile Include="Functions\ForceStartStimulation.cs" />
     <Compile Include="Functions\KickWatchdog.cs" />
-    <Compile Include="Functions\ReadCalibration.cs" />
-    <Compile Include="Functions\ReadHalStatus.cs" />
-    <Compile Include="Functions\ResetDevice.cs" />
-    <Compile Include="Functions\SetAnalogVoltage.cs" />
-    <Compile Include="Functions\SetDigitalPin.cs" />
     <Compile Include="Functions\SetWaveformProgram.cs" />
     <Compile Include="Functions\StartStimulation.cs" />
     <Compile Include="Functions\StopStimulation.cs" />
-    <Compile Include="Functions\WriteCalibration.cs" />
-    <Compile Include="Functions\WriteSerialNumber.cs" />
     <Compile Include="InvalidMessageException.cs" />
     <Compile Include="InvalidSlaveResponseException.cs" />
     <Compile Include="IMessageVisitor.cs" />

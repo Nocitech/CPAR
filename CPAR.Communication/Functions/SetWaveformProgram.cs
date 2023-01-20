@@ -11,9 +11,9 @@ namespace CPAR.Communication.Functions
     public class SetWaveformProgram :
         Function
     {
-        public const int MAX_NO_OF_INSTRUCTIONS = 20;
+        public const int MAX_NO_OF_INSTRUCTIONS = 256;
         public const int INSTRUCTIONS_LENGTH = 5;
-        public const byte FUNCTION_CODE = 0x02;
+        public const byte FUNCTION_CODE = 0x10;
         public const double MAX_PRESSURE = 100;
         public const double UPDATE_RATE = 20;
 
