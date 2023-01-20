@@ -48,7 +48,7 @@ namespace CPAR.Core.Tests
                 DeviceManager.Execute(CPARDevice.CreatePulseProgram(0, NO_OF_STIMULI, T_ON, T_OFF, stimulatingPressure, P_STATIC));
                 DeviceManager.Execute(SECOND_CUFF ? CPARDevice.CreatePulseProgram(1, NO_OF_STIMULI, T_ON, T_OFF, stimulatingPressure, P_STATIC) :
                                                     CPARDevice.CreateEmptyProgram(1));
-                StartDevice(StartStimulation.StopCriterion.STOP_CRITERION_ON_BUTTON);
+                StartDevice(AlgometerStopCriterion.STOP_CRITERION_ON_BUTTON_PRESSED);
                 Log.Debug("TS STARTED [NO: {0}, T_ON: {1}, T_OFF: {2}", NO_OF_STIMULI, T_ON, T_OFF);
 
                 result = new TemporalSummationResult(NO_OF_STIMULI)

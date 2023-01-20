@@ -11,18 +11,13 @@ namespace CPAR.Communication.Functions
     public class ForceStartStimulation :
         Function
     {
-        public enum StopCriterion
-        {
-            STOP_CRITERION_ON_BUTTON_VAS = 0,
-            STOP_CRITERION_ON_BUTTON
-        }
-
         private static byte ResponseLength = 0;
 
         public ForceStartStimulation() :
-            base(0x0A, 1)
+            base(0x12, 2)
         {
-            Criterion = StopCriterion.STOP_CRITERION_ON_BUTTON_VAS;
+            Criterion = AlgometerStopCriterion.STOP_CRITERION_ON_BUTTON_VAS;
+            CompressorMode = AlgometerCompressorMode.AUTO;
         }
 
         protected override bool IsResponseValid()
@@ -33,21 +28,22 @@ namespace CPAR.Communication.Functions
         [Category("Stop Criterion")]
         [Description("Stop criterion for the stimulation")]
         [XmlAttribute("stop-criterion")]
-        public StopCriterion Criterion
+        public AlgometerStopCriterion Criterion
         {
-            get
-            {
-                return (StopCriterion)request.GetByte(0);
-            }
-            set
-            {
-                request.InsertByte(0, (byte)value);
-            }
+            get => (AlgometerStopCriterion)request.GetByte(0);
+            set => request.InsertByte(0, (byte)value);
+        }
+
+        [XmlAttribute("compressor-mode")]
+        public AlgometerCompressorMode CompressorMode
+        {
+            get => (AlgometerCompressorMode)request.GetByte(1);
+            set => request.InsertByte(1, (byte)value);
         }
 
         public override string ToString()
         {
-            return "[0x0A] Force Start Stimulation";
+            return "[0x12] Force Start Stimulation";
         }
 
         public override string SerializeResponse()

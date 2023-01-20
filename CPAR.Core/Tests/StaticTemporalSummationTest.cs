@@ -75,7 +75,7 @@ namespace CPAR.Core.Tests
                 DeviceManager.Execute(CPARDevice.CreateStaticProgram(PrimaryChannel, StimulusDuration, stimulatingPressure));
                 DeviceManager.Execute(SECOND_CUFF ? CPARDevice.CreateStaticProgram(SecondaryChannel, StimulusDuration, stimulatingPressure) :
                                                     CPARDevice.CreateEmptyProgram(SecondaryChannel));
-                StartDevice(StartStimulation.StopCriterion.STOP_CRITERION_ON_BUTTON);
+                StartDevice(AlgometerStopCriterion.STOP_CRITERION_ON_BUTTON_PRESSED);
                 Log.Debug("STATIC TS STARTED [Pressure: {0}, Duration: {1}, Both Cuffs: {2}", stimulatingPressure, StimulusDuration, SECOND_CUFF);
 
                 result = new StaticTemporalSummationResult()

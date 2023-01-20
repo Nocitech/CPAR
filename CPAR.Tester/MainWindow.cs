@@ -178,10 +178,10 @@ namespace CPAR.Tester
             msgTimer.Enabled = false;
         }
 
-        private void SetupFunctions(DeviceID id)
+        private void SetupFunctions()
         {
             mFunctionList.Items.Clear();
-            mFunctionList.Items.AddRange(FunctionFactory.GetFunctions(id));
+            mFunctionList.Items.AddRange(FunctionFactory.GetFunctions());
 
             if (mFunctionList.Items.Count > 0)
             {
@@ -275,7 +275,7 @@ namespace CPAR.Tester
 
         public void Accept(EventMessage eventMsg)
         {
-            if (eventMsg.Event == EventMessage.EventID.EVT_WAVEFORMS_COMPLETED & autoStart)
+            if (eventMsg.Event == EventID.EVT_WAVEFORMS_COMPLETED & autoStart)
             {
                 Execute(FunctionFactory.GetFunction(typeof(StartStimulation)), true);
             }
@@ -301,8 +301,8 @@ namespace CPAR.Tester
                     Log.Debug("Initializing connection");
                     DeviceIdentification devFunction = (DeviceIdentification) FunctionFactory.GetFunction(typeof(DeviceIdentification));
                     Execute(devFunction, true);
-                    devID = devFunction.Identity;
-                    SetupFunctions(devID);
+                    devID = DeviceID.CPAR;
+                    SetupFunctions();
                     DeviceType.Text = "Device: " + devID.ToString();
                     Log.Debug(DeviceType.Text);
 

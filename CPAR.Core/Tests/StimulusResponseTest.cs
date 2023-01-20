@@ -133,15 +133,15 @@ namespace CPAR.Core.Tests
             return retValue;
         }
 
-        private StartStimulation.StopCriterion GetStopCriterion()
+        private AlgometerStopCriterion GetStopCriterion()
         {
             switch (STOP_MODE)
             {
-                case StopMode.STOP_ONLY_ON_BUTTON: return StartStimulation.StopCriterion.STOP_CRITERION_ON_BUTTON;
-                case StopMode.STOP_ON_VAS_AND_BUTTON: return StartStimulation.StopCriterion.STOP_CRITERION_ON_BUTTON_VAS;
+                case StopMode.STOP_ONLY_ON_BUTTON: return AlgometerStopCriterion.STOP_CRITERION_ON_BUTTON_PRESSED;
+                case StopMode.STOP_ON_VAS_AND_BUTTON: return AlgometerStopCriterion.STOP_CRITERION_ON_BUTTON_VAS;
             }
 
-            return StartStimulation.StopCriterion.STOP_CRITERION_ON_BUTTON;
+            return AlgometerStopCriterion.STOP_CRITERION_ON_BUTTON_PRESSED;
         }
 
         protected override void Process(StatusMessage msg)

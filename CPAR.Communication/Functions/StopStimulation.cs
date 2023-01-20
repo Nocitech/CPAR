@@ -11,7 +11,7 @@ namespace CPAR.Communication.Functions
     {
         private static byte ResponseLength = 0;
 
-        public StopStimulation() : base(0x04, 0) { }
+        public StopStimulation() : base(0x13, 0) { }
 
         protected override bool IsResponseValid()
         {
@@ -20,7 +20,7 @@ namespace CPAR.Communication.Functions
 
         public override string ToString()
         {
-            return "[0x04] Stop Stimulation";
+            return "[0x13] Stop Stimulation";
         }
 
         public override string SerializeResponse()

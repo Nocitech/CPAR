@@ -91,7 +91,7 @@ namespace CPAR.Core.Tests
                     DeviceManager.Execute(CPARDevice.CreatePulseProgram(0, 1, r.T_ON, r.T_OFF, r.Pressure, P_STATIC));
                     DeviceManager.Execute(SECOND_CUFF ? CPARDevice.CreatePulseProgram(1, 1, r.T_ON, r.T_OFF, r.Pressure, P_STATIC) :
                                                         CPARDevice.CreateEmptyProgram(1));
-                    ForceStartDevice(ForceStartStimulation.StopCriterion.STOP_CRITERION_ON_BUTTON);
+                    ForceStartDevice(AlgometerStopCriterion.STOP_CRITERION_ON_BUTTON_PRESSED);
                     Log.Debug("TS STARTED [NO: {0}, T_ON: {1}, T_OFF: {2}", currentStimulus, r.T_ON, r.T_OFF);
                     initializing = true;
                 }

@@ -15,7 +15,7 @@ namespace CPAR.Communication
     public class DeviceManager : IMessageVisitor
     {
         public static event EventHandler<bool> DeviceStateChanged;
-        public static event EventHandler<EventMessage.EventID> EventReceived;
+        public static event EventHandler<EventID> EventReceived;
         public static event EventHandler<StatusMessage> StatusReceived;
 
         #region Construction and singleton handling

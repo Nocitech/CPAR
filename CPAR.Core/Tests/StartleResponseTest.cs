@@ -151,7 +151,7 @@ namespace CPAR.Core.Tests
                             Log.Status("NORMAL PROBE Pressure: {0:0.0}kPa", stimulatingPressure);
                         }
 
-                        StartDevice(Communication.Functions.StartStimulation.StopCriterion.STOP_CRITERION_ON_BUTTON);
+                        StartDevice(Communication.AlgometerStopCriterion.STOP_CRITERION_ON_BUTTON_PRESSED);
                         state = StartleState.STIMULATING;
                         count = 0;
                     }

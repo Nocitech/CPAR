@@ -35,13 +35,9 @@ namespace CPAR.Tester
         */
         [XmlElement("DeviceIdentification", typeof(DeviceIdentification))]
         [XmlElement("KickWatchdog", typeof(KickWatchdog))]
-        [XmlElement("ReadCalibration", typeof(ReadCalibration))]
-        [XmlElement("ResetDevice", typeof(ResetDevice))]
         [XmlElement("SetWaveformProgram", typeof(SetWaveformProgram))]
         [XmlElement("StartStimulation", typeof(StartStimulation))]
         [XmlElement("StopStimulation", typeof(StopStimulation))]
-        [XmlElement("WriteCalibration", typeof(WriteCalibration))]
-        [XmlElement("WriteSerialNumber", typeof(WriteSerialNumber))]
         public Function[] Functions { get; set; }
 
         public static TestScript Load(string filename)
