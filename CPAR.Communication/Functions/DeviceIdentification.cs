@@ -17,7 +17,7 @@ namespace CPAR.Communication.Functions
 
         protected override bool IsResponseValid()
         {
-            return response.Length == ResponseLength;
+            return response?.Length == ResponseLength;
         }
 
         [XmlIgnore]
@@ -25,7 +25,7 @@ namespace CPAR.Communication.Functions
         [Description("The identifier of the manufacturer")]
         public UInt32 ManufactureID
         {
-            get => response.GetUInt32(0);
+            get => response is object ? response.GetUInt32(0) : 0;
         }
 
         [XmlIgnore]
@@ -33,7 +33,7 @@ namespace CPAR.Communication.Functions
         [Description("The name of the manufacturer")]
         public string Manufacture
         {
-            get => response.GetString(16, 24);
+            get => response is object ? response.GetString(16, 24) : "";
         }
 
         [XmlIgnore]
@@ -41,7 +41,7 @@ namespace CPAR.Communication.Functions
         [Description("The identifier of the device")]
         public UInt16 DeviceID
         {
-            get => response.GetUInt16(4);
+            get => response is object ? response.GetUInt16(4) : (UInt16) 0;
         }
 
         [XmlIgnore]
@@ -49,7 +49,7 @@ namespace CPAR.Communication.Functions
         [Description("The name of the device")]
         public string Device
         {
-            get => response.GetString(40, 24);
+            get => response is object ? response.GetString(40, 24) : "";
         }
 
 
@@ -58,7 +58,7 @@ namespace CPAR.Communication.Functions
         [Description("Major Version")]
         public byte MajorVersion
         {
-            get => response.GetByte(10);
+            get => response is object ? response.GetByte(10) : (byte) 0;
         }
 
         [XmlIgnore]
@@ -66,7 +66,7 @@ namespace CPAR.Communication.Functions
         [Description("Major Version")]
         public byte MinorVersion
         {
-            get => response.GetByte(11);
+            get => response is object ? response.GetByte(11) : (byte) 0;
         }
 
         [XmlIgnore]
@@ -74,7 +74,7 @@ namespace CPAR.Communication.Functions
         [Description("Patch Version")]
         public byte PatchVersion
         {
-            get => response.GetByte(12);
+            get => response is object ? response.GetByte(12) : (byte) 0;
         }
 
         [XmlIgnore]
@@ -82,7 +82,7 @@ namespace CPAR.Communication.Functions
         [Description("Engineering Version")]
         public byte EngineeringVersion
         {
-            get => response.GetByte(13);
+            get =>  response is object ? response.GetByte(13) : (byte)0;
         }
 
         [XmlIgnore]
@@ -97,7 +97,7 @@ namespace CPAR.Communication.Functions
         [Description("The serial number of device that is connected")]
         public UInt32 SerialNumber
         {
-            get => response.GetUInt32(6);
+            get => response is object ? response.GetUInt32(6) : (UInt32) 0;
         }
 
         [XmlIgnore]
@@ -105,7 +105,7 @@ namespace CPAR.Communication.Functions
         [Description("The checksum number of device that is connected")]
         public UInt16 Checksum
         {
-            get => response.GetUInt16(14);
+            get => response is object ? response.GetUInt16(14) : (UInt16) 0;
         }
 
         public override string ToString() => "[0x01] Device Identification";
