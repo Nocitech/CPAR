@@ -20,9 +20,10 @@ namespace CPAR.Communication.Functions
         private static byte ResponseLength = 0;
 
         public StartStimulation() : 
-            base(0x03, 1)
+            base(0x11, 2)
         {
-            Criterion = StopCriterion.STOP_CRITERION_ON_BUTTON_VAS;
+            Criterion = AlgometerStopCriterion.STOP_CRITERION_ON_BUTTON_VAS;
+            CompressorMode = AlgometerCompressorMode.AUTO;
         }
 
         protected override bool IsResponseValid()
@@ -33,21 +34,22 @@ namespace CPAR.Communication.Functions
         [Category("Stop Criterion")]
         [Description("Stop criterion for the stimulation")]
         [XmlAttribute("stop-criterion")]
-        public StopCriterion Criterion
+        public AlgometerStopCriterion Criterion
         {
-            get
-            {
-                return (StopCriterion) request.GetByte(0);
-            }
-            set
-            {
-                request.InsertByte(0, (byte) value);
-            }
+            get => (AlgometerStopCriterion)request.GetByte(0);
+            set => request.InsertByte(0, (byte)value);
+        }
+
+        [XmlAttribute("compressor-mode")]
+        public AlgometerCompressorMode CompressorMode
+        {
+            get => (AlgometerCompressorMode)request.GetByte(1);
+            set => request.InsertByte(1, (byte)value);
         }
 
         public override string ToString()
         {
-            return "[0x03] Start Stimulation";
+            return "[0x11] Start Stimulation";
         }
 
         public override string SerializeResponse()

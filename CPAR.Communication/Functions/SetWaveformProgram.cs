@@ -316,7 +316,7 @@ namespace CPAR.Communication.Functions
 
         public override string ToString()
         {
-            return "[0x02] Set Waveform Program";
+            return "[0x10] Set Waveform Program";
         }
 
         public override string SerializeResponse()
