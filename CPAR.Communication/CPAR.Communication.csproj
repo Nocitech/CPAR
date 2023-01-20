@@ -41,6 +41,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AlgometerCompressorMode.cs" />
+    <Compile Include="AlgometerStopCriterion.cs" />
     <Compile Include="CPARDevice.cs" />
     <Compile Include="CRC8CCITT.cs" />
     <Compile Include="Destuffer.cs" />

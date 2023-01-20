@@ -11,7 +11,7 @@ namespace CPAR.Communication.Functions
     {
         private static byte ResponseLength = 4;
 
-        public KickWatchdog() : base(0x08, 0) { }
+        public KickWatchdog() : base(0x02, 0) { }
 
         protected override bool IsResponseValid()
         {
