@@ -305,7 +305,7 @@ namespace CPAR.Core
             }
         }
 
-        protected void StartDevice(StartStimulation.StopCriterion criterion)
+        protected void StartDevice(AlgometerStopCriterion criterion)
         {
             DeviceManager.Execute(new StartStimulation() { Criterion = criterion });
         }

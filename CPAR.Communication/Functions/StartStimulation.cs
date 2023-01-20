@@ -11,12 +11,6 @@ namespace CPAR.Communication.Functions
     public class StartStimulation :
         Function
     {
-        public enum StopCriterion
-        {
-            STOP_CRITERION_ON_BUTTON_VAS = 0,
-            STOP_CRITERION_ON_BUTTON
-        }
-
         private static byte ResponseLength = 0;
 
         public StartStimulation() : 
