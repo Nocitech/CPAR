@@ -47,6 +47,7 @@
     <Compile Include="DeviceID.cs" />
     <Compile Include="DeviceManager.cs" />
     <Compile Include="DeviceMaster.cs" />
+    <Compile Include="EventID.cs" />
     <Compile Include="Frame.cs" />
     <Compile Include="Function.cs" />
     <Compile Include="Functions\CalibratorID.cs" />

@@ -35,9 +35,9 @@ namespace CPAR.Communication.Messages
         public StatusMessage(Packet response) :
             base(response)
         {
-            if (mResponse.Length != 14)
+            if (mResponse.Length != 15)
             {
-                throw new InvalidMessageException("A received StatusMessage does not have a length of 14");
+                throw new InvalidMessageException("A received StatusMessage does not have a length of 15");
             }
         }
 
@@ -284,6 +284,17 @@ namespace CPAR.Communication.Messages
                 return mResponse.GetByte(13);
             }
         }
+        #endregion
+        #region BYTE 14: STOP PRESSED
+        [Category("4 - Pain Rating")]
+        public bool StopPressed
+        {
+            get
+            {
+                return mResponse.GetByte(14) != 0;
+            }
+        }
+
         #endregion
         #endregion
     }

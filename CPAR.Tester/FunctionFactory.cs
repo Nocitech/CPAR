@@ -29,38 +29,21 @@ namespace CPAR.Tester
             functions.Add(typeof(ForceStartStimulation), new ForceStartStimulation());
         }
 
-        public static Function[] GetFunctions(DeviceID id)
+        public static Function[] GetFunctions()
         {
-            List<Function> retValue = new List<Function>();
-
-            switch (id)
+            return new Function[]
             {
-                case DeviceID.CPAR:
-                    retValue.Add(functions[typeof(DeviceIdentification)]);
-                    retValue.Add(functions[typeof(SetWaveformProgram)]);
-                    retValue.Add(functions[typeof(StartStimulation)]);
-                    retValue.Add(functions[typeof(StopStimulation)]);
-                    retValue.Add(functions[typeof(WriteSerialNumber)]);
-                    retValue.Add(functions[typeof(WriteCalibration)]);
-                    retValue.Add(functions[typeof(ReadCalibration)]);
-                    retValue.Add(functions[typeof(KickWatchdog)]);
-                    retValue.Add(functions[typeof(ResetDevice)]);
-                    retValue.Add(functions[typeof(ForceStartStimulation)]);
-                    break;
-                case DeviceID.HW_TESTER:
-                    retValue.Add(functions[typeof(DeviceIdentification)]);
-                    retValue.Add(functions[typeof(WriteSerialNumber)]);
-                    retValue.Add(functions[typeof(WriteCalibration)]);
-                    retValue.Add(functions[typeof(ReadCalibration)]);
-                    retValue.Add(functions[typeof(SetDigitalPin)]);
-                    retValue.Add(functions[typeof(SetAnalogVoltage)]);
-                    retValue.Add(functions[typeof(ReadHalStatus)]);
-                    break;
-                default:
-                    break;
-            }
-
-            return retValue.ToArray();
+                functions[typeof(DeviceIdentification)],
+                functions[typeof(SetWaveformProgram)],
+                functions[typeof(StartStimulation)],
+                functions[typeof(StopStimulation)],
+                functions[typeof(WriteSerialNumber)],
+                functions[typeof(WriteCalibration)],
+                functions[typeof(ReadCalibration)],
+                functions[typeof(KickWatchdog)],
+                functions[typeof(ResetDevice)],
+                functions[typeof(ForceStartStimulation)]
+            };
         }
 
         public static Function GetFunction(Type type)
